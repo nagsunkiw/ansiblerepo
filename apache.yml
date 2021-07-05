@@ -13,7 +13,8 @@
           state: started
           enabled: True
       - name: deploy index file
-          src: index.html 
+        copy:
+           src: index.html 
           dest: /var/www/html
           
              
