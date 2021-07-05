@@ -1,14 +1,13 @@
 --- #This is yaml file for ansible
 - hosts: demo
-  become: yes
+  become: True
   connection: ssh
   tasks:
       - name: install apache
-        action: yum name=httpd state=present
-      - name: start apache server
-        action: service name= httpd state=started 
-      - name: copy index.html
-        action: copy src= index.html dest= /var/www/html/       
+        yum: 
+          name: "httpd" 
+          state: "present"
+          
              
              
       
