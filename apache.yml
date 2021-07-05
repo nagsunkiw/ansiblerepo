@@ -7,6 +7,14 @@
         yum: 
           name: "httpd" 
           state: "present"
+      - name: start apache
+        service:
+          name: httpd
+          state: started
+          enabled: True
+      - name: deploy index file
+          src: index.html 
+          dest: /var/www/html
           
              
              
