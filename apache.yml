@@ -15,7 +15,7 @@
       - name: deploy index file
         copy:
            src: index.html 
-          dest: /var/www/html
+           dest: /var/www/html
           
              
              
