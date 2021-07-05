@@ -4,11 +4,11 @@
   connection: ssh
   tasks:
       - name: install apache
-        yum: name=httpd state=present
+        action: yum name=httpd state=present
       - name: start apache server
         action: service name= httpd state=started 
       - name: copy index.html
-        copy: src= index.html dest= /var/www/html/       
+        action: copy src= index.html dest= /var/www/html/       
              
              
       
