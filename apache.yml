@@ -6,9 +6,9 @@
   gather_facts: yes
   tasks:
       - name: install apache
-        yum: name=https state=present
+        yum: name=httpd state=present
       - name: start apache server
-        service: name=https state=started enabled: true
+        service: name=httpd state=started enabled: true
       - name: copy index.html
         copy: src= index.html dest: /var/www/html/
         
