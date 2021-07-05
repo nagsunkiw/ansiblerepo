@@ -13,7 +13,7 @@
              state=started 
              enabled=True
       - name: copy index.html
-        copy: src= index.html dest: /var/www/html/
+        copy: src= index.html dest= /var/www/html/
         
         
         
