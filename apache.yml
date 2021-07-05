@@ -1,0 +1,16 @@
+--- #This is yaml file for ansible
+- hosts: demo
+  become: yes
+  user: root
+  connection: ssh
+  gather_facts: yes
+  tasks:
+      - name: install apache
+        yum: name=https state=present
+      - name: start apache server
+        service: name=https state=started enabled: true
+      - name: copy index.html
+        copy: src= index.html dest: /var/www/html/
+        
+        
+        
