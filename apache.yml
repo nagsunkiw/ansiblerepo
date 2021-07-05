@@ -3,12 +3,15 @@
   become: yes
   user: root
   connection: ssh
-  gather_facts: yes
+  
   tasks:
       - name: install apache
         yum: name=httpd state=present
       - name: start apache server
-        service: name=httpd state=started enabled: true
+        service:
+             name=httpd 
+             state=started 
+             enabled=True
       - name: copy index.html
         copy: src= index.html dest: /var/www/html/
         
